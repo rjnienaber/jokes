@@ -1,0 +1,33 @@
+
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="https://cdn.hyperdev.com/us-east-1%3A13bd8247-2f0e-479f-8bc2-c10a813ff665%2Ffavicon-96x96.png">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <style>
+      hr {
+        margin-bottom: 5px;
+        margin-top: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <% for joke in @jokes : %><div class="joke">
+      <div class="text">
+        <%= joke.title %><br/><br/>
+        <%= joke.selftext %>
+      </div>
+      <span class="score">
+        <strong><a href="<%- joke.url %>">Score:</a></strong> <%= joke.score %>
+        <a class="twitter-share-button btn" href="https://twitter.com/intent/tweet?text=<%= joke.title %>%0A%0A<%= joke.selftext %>">Tweet</a>
+      </span>
+    </div>
+    <hr />
+    <% end %>
+  </body>
+</html>

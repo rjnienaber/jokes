@@ -1,0 +1,28 @@
+{
+	"name": "reddit-jokes",
+	"version": "0.0.1",
+	"description": "Pulls the latest jokes from /r/jokes on reddit",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"dependencies": {
+		"express": "^4.12.4",
+		"ect": "^0.5.9",
+		"underscore": "*",
+		"request": "*"
+	},
+	"engines": {
+		"node": "4.4.3"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://scarlet-drifter.hyperdev.space/"
+	},
+	"keywords": [
+		"node",
+		"hyperdev",
+		"express"
+	],
+	"license": "MIT"
+}
