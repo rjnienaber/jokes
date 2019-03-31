@@ -7,22 +7,26 @@
 		"start": "node server.js"
 	},
 	"dependencies": {
-		"express": "^4.12.4",
 		"ect": "^0.5.9",
-		"underscore": "*",
-		"request": "*"
+		"express": "*",
+		"lodash": "*",
+		"axios": "*"
 	},
 	"engines": {
-		"node": "4.4.5"
+		"node": "10.1.0"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://scarlet-drifter.hyperdev.space/"
+		"url": "https://github.com/rjnienaber/jokes"
 	},
 	"keywords": [
 		"node",
 		"hyperdev",
+		"glitch",
 		"express"
 	],
-	"license": "MIT"
+	"license": "MIT",
+	"devDependencies": {
+		"nodemon": "^1.18.10"
+	}
 }
