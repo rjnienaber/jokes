@@ -12,8 +12,8 @@ var underscore = require('underscore');
 
 function processJokes(data) {
   var filtered = underscore.filter(data.data.children, function (d) {
-    var length = d.data.title.length + d.data.selftext.length;
-    return length <= 140;
+    var text = d.data.title + d.data.selftext;
+    return text.length <= 140 && !text.includes('discord');
   });
   var topFive = underscore.sortBy(filtered, function (j) {
     return j.data.score;
