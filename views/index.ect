@@ -24,7 +24,7 @@
       </div>
       <span class="score">
         <strong><a href="<%- joke.url %>">Score:</a></strong> <%= joke.score %>
-        <a class="twitter-share-button btn" href="https://twitter.com/intent/tweet?text=<%= joke.title %>%0A%0A<%= joke.selftext %>">Tweet</a>
+        <a class="twitter-share-button btn" href="https://twitter.com/intent/tweet?text=<%= joke.encodedTitle %>%0A%0A<%= joke.encodedSelftext %>">Tweet</a>
       </span>
     </div>
     <hr />

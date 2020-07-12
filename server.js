@@ -16,8 +16,14 @@ function processJokes(jokes) {
     return text.length <= 140 && !text.includes('discord');
   });
 
-  const topFive = lodash.sortBy(filtered, (j) => j.data.score).reverse().slice(0, 10);
-  return lodash.map(topFive, (d) => lodash.pick(d.data, 'title', 'selftext', 'score', 'url'));
+  const bestJokes = lodash.sortBy(filtered, (j) => j.data.score).reverse().slice(0, 10);
+  return lodash.map(bestJokes, (d) => {
+    const joke = lodash.pick(d.data, 'title', 'selftext', 'score', 'url');
+    joke.encodedTitle = encodeURIComponent(joke.title);
+    joke.encodedSelftext = encodeURIComponent(joke.selftext);
+    return joke;
+  });
+
 }
 
 app.get('/', (req, res) => {
